@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+    postgres:
+        image: postgres:latest
+        container_name: postgres
+        environment:
+            POSTGRES_USER: wtc
+            POSTGRES_PASSWORD: wtc
+            POSTGRES_DB: next_gen_store
+        ports:
+            - "5439:5432"
+        volumes:
+            - postgres_data:/var/lib/postgresql/data
+
+    pgadmin:
+        image: dpage/pgadmin4:latest
+        container_name: pgadmin
+        environment:
+            PGADMIN_DEFAULT_EMAIL: wtc@gmail.com
+            PGADMIN_DEFAULT_PASSWORD: wtc
+        ports:
+            - "8081:80"
+        depends_on:
+            - postgres
+volumes:
+    postgres_data:
+
+

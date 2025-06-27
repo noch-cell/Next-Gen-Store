@@ -1,0 +1,18 @@
+### GET request to example server
+GET http://127.0.0.1:8001
+
+### Login request
+POST http://127.0.0.1:8000/api/login
+Content-Type: application/json
+
+{
+    "email": "admin1@gmail.com",
+    "password": "admin123"
+}
+
+### POST request to example server
+
+### Fetch products
+
+GET http://127.0.0.1:8000/api/products
+Authorization: Bearer <5|lZKFKLMCC9SGICfdc5FhrsBG0SZzGAZS85etEFUk05d17490>
