@@ -25,8 +25,6 @@
 
         <!-- Right: Account + Cart -->
         <div class="flex items-center space-x-6">
-            <a href="{{ route('user.login') }}" class="hover:text-orange-400">Login</a>
-            <a href="{{ route('user.register') }}" class="hover:text-orange-400">Register now</a>
             <a href="#" class="hover:text-orange-400">🛒 Cart</a>
             <!-- Account Dropdown -->
             <div class="relative group">
@@ -47,12 +45,11 @@
                 </div>
             </div>
         </div>
-    </div>
 </nav>
 
 <!-- Main content -->
 <main class="flex-grow p-6">
-    @yield('content')
+    @include('layouts.home')
 </main>
 
 </body>

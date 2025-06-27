@@ -25,8 +25,8 @@
 
         <!-- Right: Account + Cart -->
         <div class="flex items-center space-x-6">
-            <a href="{{ route('user.login.form') }}" class="hover:text-orange-400">Login</a>
-            <a href="{{ route('user.register.form') }}" class="hover:text-orange-400">Register now</a>
+            <a href="{{ route('user.login') }}" class="hover:text-orange-400">Login</a>
+            <a href="{{ route('user.register') }}" class="hover:text-orange-400">Register now</a>
             <a href="#" class="hover:text-orange-400">🛒 Cart</a>
             <!-- Account Dropdown -->
             <div class="relative group">
@@ -46,9 +46,6 @@
                     <a href="#" class="block px-4 py-2 hover:bg-gray-100">Logout</a>
                 </div>
             </div>
-        </div>
-        <div>
-            
         </div>
 </nav>
 
