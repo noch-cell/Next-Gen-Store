@@ -11,16 +11,19 @@
         <!-- Session Status -->
         <auth-session-status class="mb-4" :status="session('status')"/>
             <div class="mb-4">
-                <x-input class="bg-gray-100" type="email" name="email" placeholder="Your name" :value="old('email')" required autofocus/>
+                <x-input class="bg-gray-100" type="text" name="name" placeholder="Your name" :value="old('name')" required autofocus/>
+            </div>
+            <div class="mb-4">
+                <x-input class="bg-gray-100" type="text" name="address" placeholder="Your address" :value="old('address')" required autofocus/>
+            </div>
+            <div class="mb-4">
+                <x-input class="bg-gray-100" type="text" name="phone" placeholder="Your phone" :value="old('phone')" required autofocus/>
             </div>
         <div class="mb-4">
             <x-input class="bg-gray-100" type="email" name="email" placeholder="Your email address" :value="old('email')" required autofocus/>
         </div>
         <div class="mb-4">
-            <x-input class="bg-gray-100" type="password" name="email" placeholder="Your password" :value="old('email')" required autofocus/>
-        </div>
-        <div class="mb-6">
-            <x-input class="bg-gray-100" type="password" name="email" placeholder="confirm password" :value="old('email')" required autofocus/>
+            <x-input class="bg-gray-100" type="password" name="password" placeholder="Your password" :value="old('password')" required autofocus/>
         </div>
 
         <button

@@ -14,20 +14,24 @@ class UserAuthController extends Controller
     public function register(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:customers,email',
-            'password' => 'required|min:6|confirmed',
+            'name' => 'required',
+            'address' => 'required',
+            'phone'=> 'required',
+            'email' => 'required|email',
+            'password' => 'required',
         ]);
 
         $customer = Customer::create([
             'name' => $request->name,
+            'address' => $request->address,
+            'phone'=> $request->phone,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
 
-        Auth::login($customer);
+        Auth::guard('customer')->login($customer);
 
-        return redirect()->route('home');
+        return redirect()->route('home.home')->with('status', 'Registration successful.');
     }
 
     public function login(Request $request)
